@@ -1,33 +1,16 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
-def homepage():
-    st.title("Welcome to My GitHub Portfolio!")
-    st.write("This is a showcase of some of my GitHub projects.")
-    st.write("Use the menu on the left to navigate the different pages.")
 
-def project_page():
-    st.title("My GitHub Projects")
-    st.write("Here are some of my latest GitHub projects:")
-    # Add code here to display your GitHub projects
+with st.sidebar:
+	selected = option_menu(
+		menu_title="Main Menu",
+		option=["Home", "Project", "Contact"],
+	)
 
-def contact_page():
-    st.title("Contact Me")
-    st.write("You can contact me at:")
-    st.write("Email: myemail@example.com")
-    st.write("Twitter: @mytwitterhandle")
-
-# Create the Streamlit app
-def app():
-    st.set_page_config(page_title="My GitHub Portfolio", page_icon=":guardsman:", layout="wide")
-    st.sidebar.title("Menu")
-    menu_items = ["Homepage", "Projects", "Contact"]
-    choice = st.sidebar.selectbox("Select a page", menu_items)
-    if choice == "Homepage":
-        homepage()
-    elif choice == "Projects":
-        project_page()
-    elif choice == "Contact":
-        contact_page()
-
-if __name__ == '__main__':
-    app()
+if selected == "home":
+	st.title(f"You have selected {selected}")
+if selected == "Project":
+	st.title(f"You have selected {selected}")
+if selected == "Contact":
+	st.title(f"You have selected {selected}")
