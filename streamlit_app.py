@@ -8,7 +8,7 @@ with st.sidebar:
 		option=["Home", "Project", "Contact"],
 	)
 
-if selected == "home":
+if selected == "Home":
 	st.title(f"You have selected {selected}")
 if selected == "Project":
 	st.title(f"You have selected {selected}")
