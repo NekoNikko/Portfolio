@@ -925,6 +925,21 @@ watchdog = {version = "*", markers = "platform_system != \"Darwin\""}
 snowflake = ["snowflake-snowpark-python"]
 
 [[package]]
+name = "streamlit-lottie"
+version = "0.0.3"
+description = "A Streamlit custom component to load Lottie animations"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "streamlit-lottie-0.0.3.tar.gz", hash = "sha256:c1b65e2b56c51db7f911c727b16e8f1e27591594294f0ac06333978984cade83"},
+    {file = "streamlit_lottie-0.0.3-py3-none-any.whl", hash = "sha256:b6ab8171d4423cdd14630dcae237fc339b998264dd57ff8810705e01d03f5c33"},
+]
+
+[package.dependencies]
+streamlit = ">=0.63"
+
+[[package]]
 name = "streamlit-option-menu"
 version = "0.3.2"
 description = "streamlit-option-menu is a simple Streamlit component that allows users to select a single item from a list of options in a menu."
@@ -1122,4 +1137,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "3.9"
-content-hash = "dc0a06200ec43319375fe58d0ac4e8f8794af9766213d1713184cc1ffd8c349a"
+content-hash = "a4fd96e3cb96bbf469a1263b843d3afa1bd6fa49987cd862652d4c9272826c99"
