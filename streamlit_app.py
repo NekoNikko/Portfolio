@@ -14,3 +14,5 @@ if selected == "Project":
 	st.title(f"You have selected {selected}")
 if selected == "Contact":
 	st.title(f"You have selected {selected}")
+if selected == "About":
+	st.title(f"You have selected {selected}")
