@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "portfolio"
+version = "0.1.0"
+description = "This is my sample portfolio"
+authors = ["Neko"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9"
+pillow = "^9.4.0"
+streamlit = "^1.19.0"
+streamlit-option-menu = "^0.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

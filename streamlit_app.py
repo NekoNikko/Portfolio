@@ -1,5 +1,4 @@
 import streamlit as st
-sys.path.insert(1, "C:/Users/Neko/Desktop/Portfolio/streamlit_option_menu")
 from streamlit_option_menu import option_menu
 
 
