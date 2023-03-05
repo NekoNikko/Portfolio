@@ -172,6 +172,8 @@ if selected == "Contact":
 
 
 if selected == "About":
+    st.title(f"{selected}")
+
     local_css("style/style.css")
     with st.container():
         st.write("---")
@@ -190,4 +192,4 @@ if selected == "About":
         with right_column:
             # define the lottie_hello variable here
             lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ljotbiif.json")
-            st_lottie(lottie_hello, height=450, key="coding")
+            st_lottie(lottie_hello, height=600, key="coding")
