@@ -77,7 +77,7 @@ if selected == "Home":
             st.write(
                  """
                 I Like Testing new Soptware on my Create HomeLab Server With Proxmox and other Projects:                        
-                - Install Proxmox Server as My HomeLab Server.
+                - Install Proxmox Server as My HomeLab Server.                  
                 - Install and Test RMM tool VSA, ConnectWise Control, ITarian, currently testing Action1.                             
                 - Install and Test PFsense with OpenVPN, and setup OpenVPN Cloud On and NAT connectors for Server 2019 to access Onprem Devices on Hyper-V.             
                 - Azure AD Migration on Active Directory OnPrem Via Connect Sysc. On Hyper-V
