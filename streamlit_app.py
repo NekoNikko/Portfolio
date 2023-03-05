@@ -192,4 +192,4 @@ if selected == "About":
         with right_column:
             # define the lottie_hello variable here
             lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_ljotbiif.json")
-            st_lottie(lottie_hello, height=500, key="coding")
+            st_lottie(lottie_hello, height=450, key="coding")
