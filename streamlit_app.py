@@ -174,8 +174,15 @@ if selected == "Contact":
 if selected == "About":
     lottie_hello = load_lottieurl("https://ph.linkedin.com/in/marlon-argente-95a903195")
 
-    st.title(f"About {selected}")
-    st.title("Under Construction")
+    st.title(f"{selected}")
+    st.write(
+        """"
+        Welcome to my About page! I am a IT Specialist beginer on Python developer who is passionate about creating programs and automating processes.                  
+        This portfolio site is one of my beginner projects, which I built using the Python programming language, poetry for package management, Streamlit for the user interface,                    
+        and Render for deployment. Through this project, I have gained a deeper understanding of Python programming, and I am excited to further advance my skills in the areas of scripting,                    
+        programing, and automation. Please feel free to browse my projects and get in touch if you are interested in collaborating or have any questions. Thank you for visiting!                   
+        """
+        )
     st_lottie(
         lottie_hello,
         speed=1,
