@@ -4,11 +4,13 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 from PIL import Image
+import io
 
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+local_css("style/style.css")
 
 # Define function to load Lottie JSON file from URL
 def load_lottieurl(url: str):
@@ -24,7 +26,21 @@ selected = option_menu(
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",
+    styles={
+        "container": {"width": "100vw", "height": "100vh", "padding": "0", "margin": "0"},
+        "icon": {"color": "orange", "font-size": "22px"}, 
+        "nav-link": {"font-size": "22px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "green"},
+    }
 )
+
+img_contact_form = Image.open("images/contact_form.png")
+img_lottie_animation = Image.open("images/lottie_animation.png")
+
+
+
+
+
 
 if selected == "Home":
     local_css("style/style.css")
@@ -39,7 +55,7 @@ if selected == "Home":
         st.write(
             "IT Specialist with technical support and virtualization experience, skilled in Windows Server Administration, Active Directory, Network Administration, and Desktop Virtualization. Proficient in Hyper-V, Proxmox, Azure AD, AWS, and Office 365 Admin Portal. Experienced in working with Windows, Mac, and Ubuntu. Skilled in Remote Monitoring and Management tools VSA, ConnectWise Control, IT Glue, ThreatLocker, 2FA, and OPENVPN. Proficient in Network-Attached Storage (NAS), CCTV Installation, and NVR/DVR. Strong problem-solving skills and commitment to customer service."
         )
-        st.write("[Learn More >](https://www.linkedin.com/in/marlon-argente/)")
+        st.write("[Learn More >](https://ph.linkedin.com/in/marlon-argente-95a903195)")
 
     # ---- WHAT I DO ----
     with st.container():
@@ -63,16 +79,89 @@ if selected == "Home":
 				- Beginner on Python, Poetry, Github, Render.
                 """
             )
-            st.write("[More >](https://www.linkedin.com/in/marlon-argente/)")
+            st.write("[More >](https://ph.linkedin.com/in/marlon-argente-95a903195)")
         with right_column:
             st_lottie(lottie_hello, height=300, key="coding")
 
+
+
+
+
+
 if selected == "Project":
     st.title(f"Under Construction {selected}")
+
+    with st.container():
+        st.write("---")
+        st.header("My Projects")
+        st.write("##")
+        
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(img_lottie_animation)
+    with text_column:
+        st.subheader("Integrate Lottie Animations Inside Your Streamlit App")
+        st.write(
+            """
+            Learn how to use Lottie Files in Streamlit!
+            Animations make our web app more engaging and fun, and Lottie Files are the easiest way to do it!
+            In this tutorial, I'll show you exactly how to do it
+            """
+        )
+        st.markdown("[Watch Video...](https://ph.linkedin.com/in/marlon-argente-95a903195)")
+        
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_contact_form)
+        with text_column:
+            st.subheader("How To Add A Contact Form To Your Streamlit App")
+            st.write(
+                """
+                Want to add a contact form to your Streamlit website?
+                In this video, I'm going to show you how to implement a contact form in your Streamlit app using the free service ‘Form Submit’.
+                """
+            )
+            st.markdown("[Watch Video...](https://ph.linkedin.com/in/marlon-argente-95a903195)")
+
+
+
+
+
+
+
 if selected == "Contact":
     st.title(f"Under Construction {selected}")
+
+    # ---- CONTACT ----
+    with st.container():
+        st.write("---")
+        st.header("Get In Touch With Me!")
+        st.write("##")
+
+        # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
+        contact_form = """
+        <form action="https://formsubmit.co/b61ef26490bbc468e7fdff6223ec6ddf" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message here" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        """
+        left_column, right_column = st.columns(2)
+        with left_column:
+            st.markdown(contact_form, unsafe_allow_html=True)
+        with right_column:
+            st.empty()
+
+
+
+
+
+
 if selected == "About":
-    lottie_hello = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_M9p23l.json")
+    lottie_hello = load_lottieurl("https://ph.linkedin.com/in/marlon-argente-95a903195")
 
     st.title(f"About {selected}")
     st.title("Under Construction")
@@ -87,3 +176,5 @@ if selected == "About":
         key=None,
     )
     st_lottie(lottie_hello, key="hello")
+
+
