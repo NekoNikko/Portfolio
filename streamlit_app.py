@@ -6,6 +6,8 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 import io
 
+st. set_page_config(layout="wide")
+
 # Use local CSS
 def local_css(file_name):
     with open(file_name) as f:
@@ -50,10 +52,18 @@ if selected == "Home":
 
     # ---- HEADER SECTION ----
     with st.container():
+
+       
+        
         st.subheader("Hi, I am Marlon")
         st.title("A IT Specialist From Philippines")
         st.write(
-            "IT Specialist with technical support and virtualization experience, skilled in Windows Server Administration, Active Directory, Network Administration, and Desktop Virtualization. Proficient in Hyper-V, Proxmox, Azure AD, AWS, and Office 365 Admin Portal. Experienced in working with Windows, Mac, and Ubuntu. Skilled in Remote Monitoring and Management tools VSA, ConnectWise Control, IT Glue, ThreatLocker, 2FA, and OPENVPN. Proficient in Network-Attached Storage (NAS), CCTV Installation, and NVR/DVR. Strong problem-solving skills and commitment to customer service."
+                """
+                IT Specialist with technical support and virtualization experience, skilled in Windows Server Administration, Active Directory, Network Administration, and Desktop Virtualization.                 
+                Proficient in Hyper-V, Proxmox, Azure AD, AWS, and Office 365 Admin Portal. Experienced in working with Windows, Mac, and Ubuntu.                       
+                Skilled in Remote Monitoring and Management tools VSA, ConnectWise Control, IT Glue, ThreatLocker, 2FA, and OPENVPN.                    
+                Proficient in Network-Attached Storage (NAS), CCTV Installation, and NVR/DVR. Strong problem-solving skills and commitment to customer service.                 
+                """
         )
         st.write("[Learn More >](https://ph.linkedin.com/in/marlon-argente-95a903195)")
 
@@ -66,22 +76,23 @@ if selected == "Home":
             st.write("##")
             st.write(
                  """
-                I Like Testing new Soptware on my Create HomeLab Server With Proxmox and other Projects:
+                I Like Testing new Soptware on my Create HomeLab Server With Proxmox and other Projects:                        
                 - Install Proxmox Server as My HomeLab Server.
-                - Install and Test RMM tool VSA, ConnectWise Control, ITarian, currently testing Action1.
-                - Install and Test PFsense with OpenVPN, and setup OpenVPN Cloud On and NAT connectors for Server 2019 to access Onprem Devices on Hyper-V.
+                - Install and Test RMM tool VSA, ConnectWise Control, ITarian, currently testing Action1.                             
+                - Install and Test PFsense with OpenVPN, and setup OpenVPN Cloud On and NAT connectors for Server 2019 to access Onprem Devices on Hyper-V.             
                 - Azure AD Migration on Active Directory OnPrem Via Connect Sysc. On Hyper-V
-                - EC2 AWS Create test 2 Instance and enable ICMP to ping each other.
-				- Install Server 2019 Active Directory and Creating Domain User and adding Info and Group Policy.
-				- Assign license in office 365 Admin Portal and other app such as Mail, Office E3,E5, Teams.
-				- Install and TEST DATTO BACKUP.
-				- Have hands on IT Glue and ConnectWise Manage por ticketing.
-				- Beginner on Python, Poetry, Github, Render.
+                - EC2 AWS Create test 2 Instance and enable ICMP to ping each other.                    
+				- Install Server 2019 Active Directory and Creating Domain User and adding Info and Group Policy.                   
+				- Assign license in office 365 Admin Portal and other app such as Mail, Office E3,E5, Teams.                    
+				- Install and TEST DATTO BACKUP.                    
+				- Have hands on IT Glue and ConnectWise Manage por ticketing.                   
+				- Beginner on Python, Poetry, Github, Render.                   
                 """
             )
+
             st.write("[More >](https://ph.linkedin.com/in/marlon-argente-95a903195)")
         with right_column:
-            st_lottie(lottie_hello, height=300, key="coding")
+            st_lottie(lottie_hello, height=450, key="coding")
 
 
 
