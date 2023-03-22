@@ -62,7 +62,7 @@ if selected == "Home":
                 IT Specialist with technical support and virtualization experience, skilled in Windows Server Administration, Active Directory, Network Administration, and Desktop Virtualization.                 
                 Proficient in Hyper-V, Proxmox, Azure AD, AWS, and Office 365 Admin Portal. Experienced in working with Windows, Mac, and Ubuntu.                       
                 Skilled in Remote Monitoring and Management tools VSA, ConnectWise Control, IT Glue, ThreatLocker, 2FA, and OPENVPN.                    
-                Proficient in Network-Attached Storage (NAS), CCTV Installation, and NVR/DVR. Strong problem-solving skills and commitment to customer service.                 
+                Proficient in Network-Attached Storage (NAS), CCTV Installation, and NVR/DVR. Strong problem-solving skills and commitment to customer service.!                 
                 """
         )
         st.write("[Learn More >](https://ph.linkedin.com/in/marlon-argente-95a903195)")
